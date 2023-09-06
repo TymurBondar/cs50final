@@ -1,0 +1,43 @@
+body {
+    background: #023047;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 75vh;
+}
+
+.buttons button {
+    background-color: #219ebc;
+    color: white;
+    border: none;
+    padding: 10vh;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 25px;
+    font-size: 1.5rem;
+}
+
+.buttons button:hover {
+    background-color: #ffb703;
+}
+
+.heading{
+    border-radius: 5px;
+    font-size: 3rem;
+}
+
+footer{
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+    text-align: left;
+    height: 10vh;
+}
