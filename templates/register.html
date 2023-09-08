@@ -1,9 +1,15 @@
 {% extends "index.html" %}
 {%block main%}
 <form action="/register" method="post">
-    <input autocomplete="off" class="input_username_field" name="username" placeholder="Username" type="text">
-    <input autocomplete="off" class="password_field" name="password" placeholder="Password" type="password">
-    <input autocomplete="off" class="password_field" name="confirmation" placeholder="Password (again)" type="password">
+    <div>
+        <input autocomplete="off" class="input_username_field" name="username" placeholder="Username" type="text">
+    </div>
+    <div>
+        <input autocomplete="off" class="password_field" name="password" placeholder="Password" type="password">
+    </div>
+    <div>
+        <input autocomplete="off" class="password_field" name="confirmation" placeholder="Password (again)" type="password">
+    </div>
     <div id="register_button">
         <button type="submit">Register</button>
     </div>
