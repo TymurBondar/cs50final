@@ -1,14 +1,15 @@
 {% extends "index.html" %}
 {%block main%}
+<h1 class="heading">Login</h1>
 <form action="/login" method="post">
     <div>
-        <input autocomplete="off" class="input_username_field" name="username" placeholder="Username" type="text">
+        <input autocomplete="off" class="input_field" name="username" placeholder="Username" type="text">
     </div>
     <div>
-        <input autocomplete="off" class="password_field" name="password" placeholder="Password" type="password">
+        <input autocomplete="off" class="input_field" name="password" placeholder="Password" type="password">
     </div>
-    <div id="login_button">
-        <button type="submit">Login</button>
+    <div class="centered">
+        <button class="submit_button" type="submit">Login</button>
     </div>
 </form>
 {% endblock %}
