@@ -9,9 +9,9 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    height: 75vh;
+    height: 80vh;
 }
 
 .buttons button {
@@ -35,9 +35,51 @@ body {
 }
 
 footer{
-    position: absolute;
+    position: fixed;
     left: 15px;
     bottom: 10px;
     text-align: left;
-    height: 10vh;
 }
+
+.input_field {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f5f5f5;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .input_field:focus {
+    border-color: #007bff;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.5);
+  }
+
+  .submit_button {
+    padding: 10px;
+    margin: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit_button:hover {
+    background-color: #0056b3;
+  }
+
+  .submit_button:active {
+    background-color: #003d80;
+  }
+
+  .centered{
+    width:100%;
+    display: flex;
+    justify-content: center;
+  }
