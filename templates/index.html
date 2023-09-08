@@ -10,15 +10,13 @@
     </head>
     <body>
         <main class="container">
-            {% if session["user_id"] %}
-                {% block main %}{% endblock %}
-            {% else %}
+            {% block main %}
                 <h1 class="heading">Welcome to TypeFaster!</h1>
                 <div class="buttons">
-                    <button>Register</button>
-                    <button>Sign In</button>
+                    <button onclick="location.href='/register'">Register</button>
+                    <button onclick="location.href='/login'">Login</button>
                 </div>
-            {% endif %}
+            {% endblock %}
         </main>
             <footer>
                 <p>Made by Tymur Bondar <br> for CS50X</p>
