@@ -37,8 +37,9 @@ def register():
             "add username to the database"
             hash = generate_password_hash(password)
             cur.execute("INSERT INTO users(username, password_hash) VALUES (?, ?)", (username, hash))
-            print ("success")
-            return render_template("home.html")
+            con.commit()
+            con.close()
+            return render_template("home.html", username = username)
 
     return render_template ("register.html")
 
