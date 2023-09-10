@@ -2,5 +2,20 @@
 {%block main%}
 <button id="logout" onclick="location.href='/logout'">Logout</button>
 <h1 class="heading">Welcome to TypeFaster, {{ username }}</h1>
-<p>game will be here</p>
+<button id="startgame" class="submit_button" onclick="location.href='/game'">Start Game</button>
+<h3>5 fastest results</h3>
+<table>
+    <tr>
+        <th>Username</th>
+        <th>Timestamp</th>
+        <th>chars/minute</th>
+    </tr>
+    {% for game in games %}
+    <tr>
+        <td>{{ game.username }}</td>
+        <td>{{ game.timestamp }}</td>
+        <td>{{ game.result }}</td>
+    </tr>
+    {% endfor %}
+</table>
 {% endblock %}
