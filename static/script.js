@@ -9,10 +9,10 @@ function getRandomInt(max) {
 let currentWordIndex = 0;
 let mistakes = 0;
 let totalChars = 0;
+let counter = 0;
 let startTime;
 let endTime;
 let playedTime;
-let counter = 0;
 let accuracy;
 let res;
 
@@ -25,10 +25,6 @@ function displayWord() {
     typedWord.value = "";
     wordContainer.textContent = words[getRandomInt(words.length)];
 }
-
-// wordContainer.textContent represents the word to type
-// input.value represent the word that the user entered
-// wordContainer.textContent !== input.value
 
 
 // Define the event listener function
