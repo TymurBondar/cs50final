@@ -56,6 +56,8 @@ const eventListenerFunction = (event) => {
             accuracy = (words.length - mistakes) / words.length * 100;
             console.log(`Your accuracy is ${accuracy}%`);
             typedWord.disabled = true;
+            resultField = document.getElementById("result");
+            resultField.textContent = `Your speed is ${res} characters per minute with  ${accuracy}% accuracy`;
         }
     }
 };
@@ -63,7 +65,6 @@ const eventListenerFunction = (event) => {
 // Add the event listener
 typingForm.addEventListener("keyup", eventListenerFunction);
 startTime = new Date();
-
 
 
 displayWord();
