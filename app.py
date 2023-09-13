@@ -94,3 +94,8 @@ def home():
 def logout():
     session.clear()
     return redirect("/")
+
+@app.route("/game")
+@login_required
+def game():
+    return render_template("game.html")

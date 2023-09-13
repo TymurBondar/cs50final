@@ -135,3 +135,10 @@ footer{
   h3 {
     margin-top: 55px;
   }
+  #word-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+    font-size: 2rem;
+  }

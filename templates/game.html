@@ -1,0 +1,10 @@
+{% extends "index.html" %}
+{% block main %}
+<h1>Start Typing!</h1>
+<div id="word-container"></div>
+    <form id="typing-form">
+        <input type="text" id="typedWord" autofocus>
+    </form>
+<div id="result"></div>
+<script src="{{ url_for('static', filename='script.js') }}" defer></script>
+{% endblock %}
