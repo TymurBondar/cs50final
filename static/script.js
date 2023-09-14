@@ -1,7 +1,6 @@
-import { displayWord, words } from './helpers.js';
+import { displayWord, wordContainer, words } from './helpers.js';
 
-const gameLength = 20;
-let currentWordIndex = 0;
+const gameLength = 3;
 let mistakes = 0;
 let totalChars = 0;
 let counter = 0;
@@ -11,8 +10,6 @@ let playedTime;
 let accuracy;
 let res;
 
-const wordContainer = document.getElementById("word-container");
-const resultContainer = document.getElementById("result");
 const typingForm = document.getElementById("typing-form");
 const typedWord = document.getElementById("typedWord");
 
@@ -20,8 +17,8 @@ const typedWord = document.getElementById("typedWord");
 const eventListenerFunction = (event) => {
     if (event.keyCode === 32) {
         counter++;
-        totalChars += wordContainer.textContent.length;
         let input = typedWord.value;
+        totalChars += input.length;
         let goal = wordContainer.textContent
         //check for mistakes
         if (input.trim() !== goal) {
@@ -38,10 +35,10 @@ const eventListenerFunction = (event) => {
             res = Math.round((totalChars / playedTime) * 60); //gives chars per minute
             console.log(`You speed is ${res} characters per minute`);
             //calculate accuracy
-            accuracy = (words.length - mistakes) / words.length * 100;
+            accuracy = Math.round(100 * (gameLength - mistakes) / gameLength * 100) / 100;
             console.log(`Your accuracy is ${accuracy}%`);
             typedWord.disabled = true;
-            resultField = document.getElementById("result");
+            let resultField = document.getElementById("result");
             resultField.textContent = `Your speed is ${res} characters per minute with  ${accuracy}% accuracy`;
         }
     }
@@ -49,7 +46,7 @@ const eventListenerFunction = (event) => {
 
 // Add the event listener
 typingForm.addEventListener("keydown", eventListenerFunction);
-typingForm.addEventListener("keyup",() =>{
+typingForm.addEventListener("keyup", () => {
     if (event.keyCode === 32) {
         typedWord.value = "";
     }

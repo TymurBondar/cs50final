@@ -26,6 +26,8 @@ export const words = ["the", "of", "and", "a", "to", "in", "is", "you",
     "leave", "family", "it's"];
 
 
+export const wordContainer = document.getElementById("word-container");
+
 export function displayWord() {
     typedWord.value = "";
     wordContainer.textContent = words[Math.floor(Math.random() * words.length)];
