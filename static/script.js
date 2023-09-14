@@ -1,6 +1,6 @@
 import { displayWord, wordContainer } from './helpers.js';
 
-const gameLength = 3;
+const gameLength = 20;
 let mistakes = 0;
 let totalChars = 0;
 let counter = 0;

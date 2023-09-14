@@ -83,12 +83,14 @@ def home():
         cur = con.cursor()
         cur.execute("SELECT username FROM users WHERE rowid = ?;", (user_id,))
         user_data = cur.fetchone()
+        cur.execute("SELECT * FROM games ORDER BY score DESC LIMIT 5;")
+        games = cur.fetchall()
         if user_data:
             username = user_data[0]
         else:
             username = None
 
-    return render_template("home.html", username=username)
+    return render_template("home.html", username=username, games = games)
 
 @app.route("/logout")
 def logout():
@@ -103,8 +105,15 @@ def game():
 @app.route("/save_res", methods = ["POST"])
 @login_required
 def save_res():
+    user_id = session['user_id']
     data = request.get_json()
     res = data.get('res')
     accuracy = data.get('accuracy')
-    print(res, accuracy)
-    return "success"
+    #save values to db.
+    with get_db_connection() as con:
+        cur = con.cursor()
+        cur.execute("SELECT username FROM users WHERE rowid = ?;", (user_id,))
+        username = cur.fetchone()
+        cur.execute("INSERT INTO games(username, result, accuracy) VALUES (?, ?, ?)", (username[0], res, accuracy))
+        con.commit()
+    return ("success")
