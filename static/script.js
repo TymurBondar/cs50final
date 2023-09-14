@@ -15,7 +15,7 @@ const typedWord = document.getElementById("typedWord");
 
 // Define the event listener function
 const eventListenerFunction = (event) => {
-    if (event.keyCode === 32) {
+    if (event.key === " ") {
         counter++;
         let input = typedWord.value;
         totalChars += input.length;
@@ -44,8 +44,8 @@ const eventListenerFunction = (event) => {
 
 // Add the event listener
 typingForm.addEventListener("keydown", eventListenerFunction);
-typingForm.addEventListener("keyup", () => {
-    if (event.keyCode === 32) {
+typingForm.addEventListener("keyup", (event) => {
+    if (event.key === " ") {
         typedWord.value = "";
     }
 })
