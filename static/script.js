@@ -1,4 +1,4 @@
-import { displayWord, wordContainer, words } from './helpers.js';
+import { displayWord, wordContainer} from './helpers.js';
 
 const gameLength = 3;
 let mistakes = 0;
@@ -33,10 +33,8 @@ const eventListenerFunction = (event) => {
             //calculate the speed
             playedTime = (endTime - startTime) / 1000; //gives time in seconds
             res = Math.round((totalChars / playedTime) * 60); //gives chars per minute
-            console.log(`You speed is ${res} characters per minute`);
             //calculate accuracy
             accuracy = Math.round(100 * (gameLength - mistakes) / gameLength * 100) / 100;
-            console.log(`Your accuracy is ${accuracy}%`);
             typedWord.disabled = true;
             let resultField = document.getElementById("result");
             resultField.textContent = `Your speed is ${res} characters per minute with  ${accuracy}% accuracy`;
@@ -52,6 +50,5 @@ typingForm.addEventListener("keyup", () => {
     }
 })
 startTime = new Date();
-
 
 displayWord();

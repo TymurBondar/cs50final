@@ -1,4 +1,4 @@
-export const words = ["the", "of", "and", "a", "to", "in", "is", "you",
+const words = ["the", "of", "and", "a", "to", "in", "is", "you",
     "that", "it", "he", "was", "for", "on", "are", "as", "with", "his", "they",
     "I", "at", "be", "this", "have", "from", "or", "one", "had", "by", "word",
     "but", "not", "what", "all", "were", "we", "when", "your", "can", "said", "there",
