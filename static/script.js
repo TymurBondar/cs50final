@@ -6,6 +6,7 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
+const gameLength = 20;
 let currentWordIndex = 0;
 let mistakes = 0;
 let totalChars = 0;
@@ -40,9 +41,9 @@ const eventListenerFunction = (event) => {
         }
 
         displayWord();
-        if (counter >= words.length) {
+        if (counter >= gameLength) {
             // Remove the event listener here
-            typingForm.removeEventListener("keyup", eventListenerFunction);
+            typingForm.removeEventListener("keydown", eventListenerFunction);
             endTime = new Date();
             //calculate the speed
             playedTime = (endTime - startTime) / 1000; //gives time in seconds
@@ -59,7 +60,12 @@ const eventListenerFunction = (event) => {
 };
 
 // Add the event listener
-typingForm.addEventListener("keyup", eventListenerFunction);
+typingForm.addEventListener("keydown", eventListenerFunction);
+typingForm.addEventListener("keyup",() =>{
+    if (event.keyCode === 32) {
+        typedWord.value = "";
+    }
+})
 startTime = new Date();
 
 
