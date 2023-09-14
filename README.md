@@ -10,21 +10,21 @@ Registered users can log in to access the game and their performance history. <b
 --- <br>
 ## Gameplay:<br>
 Once logged in, users can start the typing game. In the game, 20 words are displayed one by one, and the user needs to type them as accurately and quickly as possible.<br>
----<br>
+--- <br>
 ## Performance Metrics:<br>
 The game calculates and records the user's typing accuracy and speed based on their performance.<br>
----<br>
+--- <br>
 ## Database Storage:<br>
 All game results are stored in an SQLite3 database for future reference.<br>
----<br>
+--- <br>
 ## Leaderboard:<br>
 The five best game results are displayed on the home page, allowing users to track their progress and compete with others.<br>
----<br>
+--- <br>
 ## Technologies Used<br>
 Python (flask)<br>
 SQLite3<br>
 Frontend: HTML, CSS, JavaScript<br>
----<br>
+--- <br>
 ## Usage<br>
 Register or log in to your account.<br>
 Start the typing game.<br>
