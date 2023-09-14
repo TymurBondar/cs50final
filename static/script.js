@@ -1,4 +1,4 @@
-import { displayWord, wordContainer} from './helpers.js';
+import { displayWord, wordContainer } from './helpers.js';
 
 const gameLength = 3;
 let mistakes = 0;
@@ -38,6 +38,18 @@ const eventListenerFunction = (event) => {
             typedWord.disabled = true;
             let resultField = document.getElementById("result");
             resultField.textContent = `Your speed is ${res} characters per minute with  ${accuracy}% accuracy`;
+
+            var data = {
+                res: res,
+                accuracy: accuracy
+            };
+            fetch('/save_res', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
         }
     }
 };

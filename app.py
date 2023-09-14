@@ -95,7 +95,16 @@ def logout():
     session.clear()
     return redirect("/")
 
-@app.route("/game")
+@app.route("/game", methods = ["GET", "POST"])
 @login_required
 def game():
     return render_template("game.html")
+
+@app.route("/save_res", methods = ["POST"])
+@login_required
+def save_res():
+    data = request.get_json()
+    res = data.get('res')
+    accuracy = data.get('accuracy')
+    print(res, accuracy)
+    return "success"
