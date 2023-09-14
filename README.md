@@ -1,4 +1,4 @@
-Typing Game Project README
+TypeFaster
 Description
 This Typing Game project allows users to register, login, and improve their typing skills by playing a fun game. It's designed to help users enhance their typing accuracy and speed.
 
