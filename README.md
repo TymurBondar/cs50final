@@ -1,6 +1,5 @@
-TypeFaster
 Description
-This Typing Game project allows users to register, login, and improve their typing skills by playing a fun game. It's designed to help users enhance their typing accuracy and speed.
+TypeFaster allows users to register, login, and improve their typing skills by playing a fun game. It's designed to help users enhance their typing accuracy and speed.
 
 Features
 User Registration: Users can create an account by providing their credentials.
@@ -16,14 +15,10 @@ Database Storage: All game results are stored in an SQLite3 database for future 
 Leaderboard: The five best game results are displayed on the home page, allowing users to track their progress and compete with others.
 
 Technologies Used
-Python
+Python (flask)
 SQLite3
 Frontend: HTML, CSS, JavaScript
-Setup
-Clone the repository.
-Set up the database schema using create_tables.sql.
-Install the necessary dependencies.
-Run the application.
+
 Usage
 Register or log in to your account.
 Start the typing game.
