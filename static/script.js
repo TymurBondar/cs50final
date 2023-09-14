@@ -1,10 +1,4 @@
-const words = [
-    "the", "be", "to"
-];
-
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-}
+import { displayWord, words } from './helpers.js';
 
 const gameLength = 20;
 let currentWordIndex = 0;
@@ -21,12 +15,6 @@ const wordContainer = document.getElementById("word-container");
 const resultContainer = document.getElementById("result");
 const typingForm = document.getElementById("typing-form");
 const typedWord = document.getElementById("typedWord");
-
-function displayWord() {
-    typedWord.value = "";
-    wordContainer.textContent = words[getRandomInt(words.length)];
-}
-
 
 // Define the event listener function
 const eventListenerFunction = (event) => {
