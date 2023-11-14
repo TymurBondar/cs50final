@@ -18,5 +18,4 @@ Welcome to TypeFaster, a fun and interactive typing game to help you improve you
 4. After completing the game, view your results including accuracy and speed.
 5. Check the leaderboard on the home page to see how you compare to other players.
 
-
 Happy typing!
