@@ -10,6 +10,12 @@ Welcome to TypeFaster, a fun and interactive typing game to help you improve you
 - **Database Integration**: All game results are stored in an SQLite3 database for future reference and analysis.
 - **Leaderboard**: The home page displays the top 5 best results from players, allowing users to compete and track their progress against others.
 
+
+## Setup
+
+- run ```pipenv install```
+
+
 ## Usage
 
 1. Register for an account or log in if you already have one.
