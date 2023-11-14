@@ -14,6 +14,7 @@ Welcome to TypeFaster, a fun and interactive typing game to help you improve you
 ## Setup
 
 - run ```pipenv install```
+- run ```flask run```
 
 
 ## Usage
